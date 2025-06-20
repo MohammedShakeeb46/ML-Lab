@@ -1,3 +1,15 @@
+'''Contour Plot
+Contour plots are useful for visualizing 3D data in two dimensions.'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate data
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+X, Y = np.meshgrid(x, y)
+Z = np.sin(np.sqrt(X**2 + Y**2))
+
 # Create contour plot
 plt.contour(X, Y, Z, levels=20, cmap='RdGy')
 plt.title('Contour Plot')
